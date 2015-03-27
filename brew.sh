@@ -14,6 +14,10 @@ brew update
 # Upgrade any already-installed formulae.
 brew upgrade
 
+#Set up cask
+brew install caskroom/cask/brew-cask
+brew upgrade brew-cask
+
 # Install GNU core utilities (those that come with OS X are outdated).
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
 brew install coreutils
@@ -95,6 +99,16 @@ brew install ssh-copy-id
 brew install tree
 brew install webkit2png
 brew install zopfli
+brew install gpg
+
+#Install languages
+brew install nodejs
+
+#Set up cask
+brew install caskroom/cask/brew-cask
+
+
 
 # Remove outdated versions from the cellar.
 brew cleanup
+brew cask cleanup
