@@ -5,6 +5,7 @@
 
 	# View the current working tree status using the short format
 	s = status -s
+	st = status
 
 	# Show the diff between the latest commit and the current state
 	d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
@@ -20,6 +21,10 @@
 
 	# Commit all changes
 	ca = !git add -A && git commit -av
+	ci = commit
+
+	co = checkout
+	aa = add --all
 
 	# Switch to a branch, creating it if necessary
 	go = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
@@ -28,6 +33,7 @@
 	tags = tag -l
 	branches = branch -a
 	remotes = remote -v
+	b = branch
 
 	# Amend the currently staged files to the latest commit
 	amend = commit --amend --reuse-message=HEAD
@@ -117,8 +123,8 @@
 
 [color "status"]
 
-	added = yellow
-	changed = green
+	added = green
+	changed = yellow
 	untracked = cyan
 
 [diff]
@@ -164,3 +170,8 @@
 [url "git://gist.github.com/"]
 
 	insteadOf = "gist:"
+[user]
+	email = jlembeck@gmail.com
+	name = Jeffrey Lembeck
+[credential]
+	helper = osxkeychain
