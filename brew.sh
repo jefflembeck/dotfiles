@@ -100,6 +100,7 @@ brew install tree
 brew install webkit2png
 brew install zopfli
 brew install gpg
+brew install tmux
 
 #Install languages
 brew install nodejs
